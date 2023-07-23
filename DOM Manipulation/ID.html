@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+</head>
+
+
+<body>
+    <!-- ⁡⁣⁣⁢Div with ID 'romesh'⁡ -->
+    <p id="romesh">Romesh</p>
+
+    <script>
+        // ⁡⁣⁣⁢Targeting element by ID⁡
+        const name = document.getElementById("romesh");
+
+        // ⁡⁣⁣⁢It will print the whole element with text⁡
+        console.log(name);
+
+        // ⁡⁣⁣⁢Storing the innerText to new variable⁡
+        const idName = name.innerText;
+        console.log(idName);
+
+        // ⁡⁣⁣⁢Changing the paragraph text or innerText⁡ 
+        name.innerText = "Hello Romesh Jain";
+        
+        // ⁡⁣⁣⁢Styling using JS
+        name.style.backgroundColor = "blue";
+        name.style.border = "2px solid red"
+
+        // Chnaging Inner HTMl
+        
+    </script>
+</body>
+
+</html>

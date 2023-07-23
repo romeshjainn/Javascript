@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Price</title>
+  </head>
+  <body>
+    <div id="div"></div>
+    
+    <script>
+      const result = fetch("https://fakestoreapi.com/products");
+      let div = document.getElementById("div");
+
+      result
+        .then(function (incomingData) {
+          return incomingData.json();
+        })
+        .then(function (data) {
+          console.log(data);
+          abc(data);
+        });
+
+      function abc(data) {
+        for (let i = 0; i < data.length; i++) {
+          let product = data[i];
+          let title = product.title; 
+          const imgElement = document.createElement("img");
+          imgElement.src = product.image; 
+          div.appendChild(imgElement);
+          imgElement.style.height = "100px"
+          div.style.border = "2px solid black";
+        }
+      }
+    </script>
+  </body>
+</html>

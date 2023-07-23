@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+</head>
+
+<body>
+    <p class="para">Class 1</p>
+    <h1 class="para">Class 2</h1>
+    <span class="para">Class 3</span>
+    <div class="para">Class 4</div>
+    <h2 class="para">Class 5</h2>
+
+    <script>
+        // ⁡⁣⁣⁢Targeting elements by Class Name⁡
+        const paraElems = document.getElementsByClassName("para");
+
+        // ⁡⁣⁣⁢Class return Array so it will print array named 'paraELems'⁡
+        console.log("ParaElems: ", paraElems);
+
+        // ⁡⁣⁣⁢Styling elements having similar classes⁡
+        for (let i = 0; i < paraElems.length; i++) {
+            paraElems[i].style.color = "red";
+
+            paraElems[i].innerText = paraElems[i].innerText.toUpperCase();
+
+            paraElems[i].innerText = "Changed Text";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+</head>
+<body>
+    <div id="idNameA">DivID</div>
+    <div id="idNameB">Div ID</div>
+    <div class="className">Div Class</div>
+    <div class="className">Div Class</div>
+    <div class="className">Div Class</div>
+    <h1>H1</h1>
+    <h2>H2</h2>
+    <h1>H1</h1>
+    <p>paragraph</p>
+    <p>paragraph</p>
+    <p>paragraph</p>
+
+    <script>
+        // ID Selector
+        let id = document.getElementById("idNameA");
+        id.style.backgroundColor = "red";
+
+        // Class Selector = Array
+        let classElements = document.getElementsByClassName("className");
+        for(let i = 0; i < classElements.length; i++){
+            classElements[i].style.backgroundColor = "blue";
+        }
+
+        // Tag Selector : creates an array containing all the tag
+        let tag = document.getElementsByTagName("h1");
+        for(let i = 0; i < tag.length; i++){
+            tag[i].style.backgroundColor = "pink";
+        }
+
+        // Query Selector : select the first of its type
+        let query = document.querySelector("h1");
+        query.style.color = "red";
+
+        // Query selectors all : creates an array , we can pass multiple elements
+        
+        let multipleElements = document.querySelectorAll("h2, p");
+
+            for(let i = 0; i < multipleElements.length; i++){
+                multipleElements[i].style.color = "purple";
+            }
+        
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let universal = document.querySelectorAll("*");
+    for (let i = 0; i < universal.length; i++) {
+      universal[i].style.margin = "0";
+    }
+
+    let body = document.querySelector("body");
+    body.style.backgroundColor = "red";
+    body.style.height = "100vh";
+    body.style.display = "grid";
+    body.style.placeItems = "center";
+
+    let div = document.createElement("div");
+    body.appendChild(div);
+    div.style.height = "300px";
+    div.style.width = "300px";
+    div.style.border = "2px solid black";
+    div.style.display = "flex";
+    div.style.flexWrap = "wrap";
+
+      let insideDiv;
+      for (let i = 0; i < 25; i++) {
+        insideDiv = document.createElement("div");
+        insideDiv.style.height = "20%";
+        insideDiv.style.width = "20%";
+
+        insideDiv.style.backgroundColor = "blue";
+        div.appendChild(insideDiv);
+        insideDiv.classList.add("hello");
+        
+              // for (let j = 0; j < insideDiv.length; j =j+ 2) {
+              //   insideDiv[j].style.backgroundColor = "white";
+              // }
+
+      }
+      let even = document.getElementsByClassName("hello");
+      
+      for(let i = 0; i < even.length; i +=2){
+        let circle = document.createElement("div");
+        circle.style.height = "20px"
+        circle.style.width = "20px"
+        circle.style.backgroundColor = "white"
+        circle.style.borderRadius = "50%";
+        even[i].appendChild(circle);
+        even[i].style.backgroundColor = "yellow";
+      }
+
+      </script>
+</body>
+
+</html>
