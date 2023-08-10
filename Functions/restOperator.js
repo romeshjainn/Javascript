@@ -5,3 +5,10 @@ function check(...numbers) {
     }
 }
 check(10, 20);
+
+
+// const myArrowFunction = (...args) => {
+//     console.log(args);
+// };
+
+// myArrowFunction(1, 2, 3);
