@@ -4,23 +4,35 @@
  * - Variable functions
  */
 
-let add = (a, b) => a + b;
+var add = (a, b) => a + b;
 console.log(add(1,2));
 
+let minus = (a, b) => a - b;
 
-// const addV1 = function (a, b) {
-//   return a + b;
-// };
-// const add = (a, b) => a + b;
-// const multiply = (a, b) => a * b;
+console.log(minus(10,2));
 
-// const customFunction = (a, b) => {
-//   const sum = a + b;
-//   const mul = a * b;
-//   return sum + mul;
-// };
 
-// console.log("addV1: ", addV1(10, 80));
-// console.log("add: ", add(100, 80));
-// console.log("multiply: ", multiply(10, 80));
-// console.log("customFunction: ", customFunction(10, 80));
+const addV1 = function (a, b) {
+  return a + b;
+};
+const add = (a, b) => a + b;
+const multiply = (a, b) => a * b;
+
+const customFunction = (a, b) => {
+  const sum = a + b;
+  const mul = a * b;
+  return sum + mul;
+};
+
+console.log("addV1: ", addV1(10, 80));
+console.log("add: ", add(100, 80));
+console.log("multiply: ", multiply(10, 80));
+console.log("customFunction: ", customFunction(10, 80));
+
+// var add = 10;
+// add = 30;
+// function add() {
+//     console.log("hello")
+// }
+// add();
+// console.log(add);
