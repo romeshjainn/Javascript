@@ -30,7 +30,7 @@ const arr = [
 ];
 // Normal Functin 
 let newArr = arr.map(function (element) {
-    if(element.isActive == false) {
+    if(!element.isActive) {
         element.isActive = "Not Available";
     }
     else {
@@ -41,7 +41,7 @@ let newArr = arr.map(function (element) {
 
 // Arrow Function 
 let newArr2 = arr.map((element) => {
-    if (element.isActive == false) {
+    if (!element.isActive) {
       element.isActive = "Not Available";
     } else {
       element.isActive = "Available";
