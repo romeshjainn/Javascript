@@ -28,12 +28,77 @@ const arr = [
     isActive: true,
   }
 ];
+// Normal Functin 
 let newArr = arr.map(function (element) {
     if(element.isActive == false) {
-        element.isActive = "na";
+        element.isActive = "Not Available";
+    }
+    else {
+        element.isActive = "Available"
     }
     return element;
 });
 
 console.log(arr)
 console.log(newArr)
+
+// Output:
+// [
+//   {
+//     id: 1,
+//     name: "John Doe",
+//     city: "New York",
+//     state: "New York",
+//     isActive: "Available",
+//   },
+//   {
+//     id: 2,
+//     name: "Jane Smith",
+//     city: "Los Angeles",
+//     state: "California",
+//     isActive: "Not Available",
+//   },
+//   {
+//     id: 3,
+//     name: "Michael Johnson",
+//     city: "Chicago",
+//     state: "Illinois",
+//     isActive: "Available",
+//   },
+//   {
+//     id: 4,
+//     name: "Emily Brown",
+//     city: "Houston",
+//     state: "Texas",
+//     isActive: "Available",
+//   },
+// ][
+//   ({
+//     id: 1,
+//     name: "John Doe",
+//     city: "New York",
+//     state: "New York",
+//     isActive: "Available",
+//   },
+//   {
+//     id: 2,
+//     name: "Jane Smith",
+//     city: "Los Angeles",
+//     state: "California",
+//     isActive: "Not Available",
+//   },
+//   {
+//     id: 3,
+//     name: "Michael Johnson",
+//     city: "Chicago",
+//     state: "Illinois",
+//     isActive: "Available",
+//   },
+//   {
+//     id: 4,
+//     name: "Emily Brown",
+//     city: "Houston",
+//     state: "Texas",
+//     isActive: "Available",
+//   })
+// ];
