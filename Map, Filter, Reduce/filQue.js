@@ -37,4 +37,12 @@ let filteredProducts = products.filter((product) => {
     : false;
 });
 
+// Another Way 
+let filteredProducts2 = products.filter(
+  (product) => product.category === "Electronics" && product.price > 500
+);
+
+console.log(filteredProducts2);
+
 console.log(filteredProducts);
+console.log(filteredProducts2);
