@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>iife function : runs only one time</title>
 </head>
 <body>
     hello
 
     <script>
+        console.log("hello");
         (function(){
             console.log = function(){};
             console.warn = function(){};
             console.error = function(){};
-        })();
+        })(); // calling iife function ();
         
-        console.log("hello");
         console.log("world"); // This won't be displayed
     </script>
 </body>
