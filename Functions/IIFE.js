@@ -1,20 +1,22 @@
-// works only once
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hello
 
-(() => {
-    let a = 10;
-    let b = 1;
-    // return 10 + 1;
-    console.log(10+1)
-    // console.log("hello");
-})();
-
-const add = (() => {
-    let a = 2;
-    let b = 4;
-    return a + b;   
-})();
-
-console.log(add); 
-
-let sum = add + 2;
-console.log(sum)
+    <script>
+        (function(){
+            console.log = function(){};
+            console.warn = function(){};
+            console.error = function(){};
+        })();
+        
+        console.log("hello");
+        console.log("world"); // This won't be displayed
+    </script>
+</body>
+</html>
