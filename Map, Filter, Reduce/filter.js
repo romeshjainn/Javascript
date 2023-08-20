@@ -1,28 +1,27 @@
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 8];
 
-// Legacy way
-let filteredArr1 = []
-for (let element of arr) {
-    if (element % 3 === 0 || element % 5 === 0) {
-        filteredArr1.push(element);
+// getting even nums from arr
+// legacy way
+const evenNumbers = [];
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+        evenNumbers.push(arr[i]);
     }
 }
-console.log(filteredArr1);
+console.log(evenNumbers); // Output: [2, 4, 6, 8, 10]
 
-// ES6 Way
-let filteredArr2 = arr.filter(
-  (element) => element % 3 === 0 || element % 5 === 0
-);
-console.log(filteredArr2)
+// using filter
+const even = arr.filter((nums) => nums % 2 == 0);
+console.log(even); // Output: [2, 4, 6, 8, 10]
 
-// Another Way 
+
+// getting nums divible by 3 and 5
 let filteredArr3 = arr.filter((item) => {
     if (item % 3 === 0 || item % 5 === 0) {
         return true;
     }
-    else {   
+    else {
         return false;
     }
 });
 console.log(filteredArr3);
-
