@@ -3,9 +3,6 @@
 
 function check(a) {
   let b = a.split("");
-  // for (let i = 0; i < b.length; i++){
-  // trying another way
-  // }
   if (
     (b[0] === "(" && b[1] === ")") ||
     (b[0] === "[" && b[1] === "]") ||
