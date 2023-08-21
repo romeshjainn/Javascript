@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage</title>
+</head>
+<body>
+    
+    <script>
+        sessionStorage.setItem("Name", "Romesh");
+        sessionStorage.setItem("Language", "Javascript");
+        sessionStorage.setItem("Name", "Nitin"); // it will update to nitin bcoz its an object
+
+        sessionStorage.removeItem("Javascript"); // it will do nothing 
+        sessionStorage.removeItem("Language"); // it will remove the object, coz we passed the key
+
+        const name = sessionStorage.getItem("Name");
+        console.log(name); // Output : nitin
+    </script>
+</body>
+</html>

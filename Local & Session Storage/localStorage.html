@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Local Storage</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <script>
+      localStorage.setItem("Name", "Romesh");
+      localStorage.setItem("Language", "Javascript");
+      localStorage.setItem("Name", "Nitin"); // it will update to nitin bcoz its an object
+
+      localStorage.removeItem("Javascript"); // it will do nothing
+      localStorage.removeItem("Language"); // it will remove the object, coz we passed the key
+
+      const name = localStorage.getItem("Name");
+      console.log(name); // Output : nitin
+
+      // it can only take string
+      // way to store an array
+
+      // Define the applications array
+      let applications = ["chess", "whatsapp", "instagram"];
+      // Store the applications array in localStorage
+      localStorage.setItem("applications", JSON.stringify(applications));
+      // Retrieve the applications array from localStorage
+      let apps = JSON.parse(localStorage.getItem("applications"));
+      // Log the retrieved applications array
+      console.log(apps);    
+    </script>
+  </body>
 </html>
