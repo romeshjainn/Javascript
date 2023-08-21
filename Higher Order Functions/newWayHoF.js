@@ -1,5 +1,6 @@
 let radius = [1, 2, 3, 4, 5];
 
+// this function takes another functions as logic
 function calculate(radius, logic) {
   let output = [];
   for (let i = 0; i < radius.length; i++) {
