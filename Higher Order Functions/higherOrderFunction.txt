@@ -1,0 +1,14 @@
+Functions that takes another function as argument, or return another functions are higher order functions
+
+examples of higher order functions that takes function as an argument
+* Array.map
+* Array.filter
+* Array.reduce
+* Set timeout()
+* fetch.this
+* regular function that takes logic from another function 
+
+examples of higher order functions that returns functions
+*
+*
+*
