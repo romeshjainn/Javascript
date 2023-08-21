@@ -41,7 +41,7 @@
       let btn = document.getElementById("btn");
 
       btn.onclick = function () {
-        value.innerHTML = ""; // Clear previous displayed values
+        value.innerHTML = ""; 
 
         for (let i = 0; i < inputFields.length; i++) {
           localStorage.setItem(`Input ${i}`, inputFields[i].value);
@@ -50,9 +50,9 @@
 
         for (let i = 0; i < inputFields.length; i++) {
           let data = localStorage.getItem(`Input ${i}`);
-          let dataNode = document.createTextNode(data); // Create a text node to hold the data
-          value.appendChild(dataNode); // Append the text node to the "value" div
-          value.appendChild(document.createElement("br")); // Add a line break for separation
+          let dataNode = document.createTextNode(data);
+          value.appendChild(dataNode);
+          value.appendChild(document.createElement("br")); 
         }
       };
     </script>
