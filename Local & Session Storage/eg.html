@@ -5,27 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border: 2px solid black;
+      padding: 1rem;
+      width: 40%;
+    }
+    input {
+      padding: 0.5rem;
+    }
+  </style>
   <body>
-    <input type="text" id="firstName" placeholder="first name" />
-    <input type="text" id="lastName" placeholder="last name" />
-    <input type="text" id="number" placeholder="number" />
-
+    <div>
+      <input type="text" id="firstName" placeholder="first name" />
+      <input type="text" id="lastName" placeholder="last name" />
+      <input type="text" id="number" placeholder="number" />
+      <input type="text" id="firstName" placeholder="first name" />
+      <input type="text" id="lastName" placeholder="last name" />
+      <input type="text" id="number" placeholder="number" />
+      <button id="btn">Submit</button>
+    </div>
+    <div id="value"></div>
     <script>
-      let firstName = document.getElementById("firstName");
-      let lastName = document.getElementById("lastName");
-      let number = document.getElementById("number");
+      let inputFields = document.querySelectorAll("input");
+      let value = document.getElementById("value");
+      let btn = document.getElementById("btn");
 
-      firstName.oninput = function () {
-        localStorage.setItem("firstName", firstName.value);
-        sessionStorage.setItem("firstName", firstName.value);
-      };
-      lastName.oninput = function () {
-        localStorage.setItem("lastName", lastName.value);
-        sessionStorage.setItem("lastName", lastName.value);
-      };
-      number.oninput = function () {
-        localStorage.setItem("number", number.value);
-        sessionStorage.setItem("number", number.value);
+      btn.onclick = function () {
+        value.innerHTML = ""; // Clear previous displayed values
+
+        for (let i = 0; i < inputFields.length; i++) {
+          localStorage.setItem(`Input ${i}`, inputFields[i].value);
+          inputFields[i].value = "";
+        }
+
+        for (let i = 0; i < inputFields.length; i++) {
+          let data = localStorage.getItem(`Input ${i}`);
+          let dataNode = document.createTextNode(data); // Create a text node to hold the data
+          value.appendChild(dataNode); // Append the text node to the "value" div
+          value.appendChild(document.createElement("br")); // Add a line break for separation
+        }
       };
     </script>
   </body>
